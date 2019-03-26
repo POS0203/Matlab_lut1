@@ -44,8 +44,8 @@ Jac=@(vel) [-b*sin(vel(1)) -1;
 % a(1)=theta double prime (accel)
 % a(2)=piston accel
     
-F=@(acc) [+a*cos(phi(i))*omega^2-b*cos(x(1,i))*(vel(1,i))^2-b*sin(x(1,i))*acc(1)-acc(2);
-          +a*sin(phi(i))*omega^2+b*sin(x(1,i))*(vel(1,i))^2-b*cos(x(1,i))*acc(1)];
+F=@(acc) [-a*cos(phi(i))*omega^2-b*cos(x(1,i))*(vel(1,i))^2-b*sin(x(1,i))*acc(1)-acc(2);
+          -a*sin(phi(i))*omega^2+b*sin(x(1,i))*(vel(1,i))^2-b*cos(x(1,i))*acc(1)];
 
 Jac=@(acc) [-b*sin(acc(1)) -1;
           -b*cos(acc(1))  0];
