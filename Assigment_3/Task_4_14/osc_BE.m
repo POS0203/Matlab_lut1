@@ -3,7 +3,7 @@ close all
 
 omega = 5; % Natural frequency 
 P = 2*pi/omega; % Period
-dt = P/20; % Time step
+dt = P/2000; % Time step
 T = 3*P; % Time interval
 N_t = floor(T/dt); % Number of nodes
 t = linspace(0, N_t*dt, N_t+1); % Time 
